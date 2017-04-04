@@ -1,0 +1,72 @@
+Graffiti Removal Requests:
+- 855865 reports (most common of these four report types)
+- Five most common wards: 14, 1, 25, 12, 35 (Gage Park, Humboldt Park, Pilsen, McKinley Park, Logan Square)
+- Most common canvasses: Brick and metal
+- Number of requests taking longer than one year to complete: 586
+- Number of requests taking fewer than 30 days to complete: 831412
+
+Pot Holes:
+- 458652 reports
+- Five most common wards: 41, 32, 23, 19, 45 (Edison Park, Bucktown, Bedford Park, Beverly, Jefferson Park)
+- 263027 patched
+- Number of requests taking longer than one year to complete: 4794
+- Number of requests taking fewer than 30 days to complete: 342154
+
+Sanitation:
+- 119011 reports
+- Five most common wards: 6, 21, 32, 17, 7 (Chatham, Brainerd, Bucktown, Auburn Gresham, Calumet Heights)
+- Garbage accounts for 39632 of the requests
+- Number of requests taking longer than one year to complete: 142
+- Number of requests taking fewer than 30 days to complete: 112295
+
+Vacant/Abandoned Buildings:
+- 58757 reports (least common of these four report types)
+- Five most common wards: 17, 34, 16, 15, 28 (Auburn Gresham, Lyons, West Englewood, Brighton Park, North Lawndale)
+- 'Completion' dates are not reported
+- 24,413 properties are marked as being used by homeless individuals, children, gangs, etc.
+
+Interesting findings:
+- There is not much overlap in terms of the five wards reporting the most issues for each of these 311 categories. 
+  Only two wards show up in the top five in more than one category.
+- Almost 18,000 reported pot holes had already been filled when someone arrived to fill them.  
+  This suggests a major issue in the process for tracking the status of these reports.
+- Many of these reports/requests are addressed fairly quickly: 97% of graffiti requests 
+  and 94% of sanitation complaints are addressed within 30 days. There is more room for improvement when it
+  comes to reports of potholes – 75% are addressed within 30 days.
+- Of the three report types that include a completion date, pot holes are the most likely to
+  go unaddressed for more than one year.
+- The wards included in the 'Five most common wards' sections above are more likely to be located South of the Loop. 
+  Including repeats, 15 are located South of downtown, while only 5 are North of downtown.
+- The numbers of graffiti requests and pot hole reports per year have declined since 2013, while the number of sanitation
+  complaints have increased slightly. Reports of vacant buildings dropped from about 18,000 in 2013 to about 3,000 in 2014.
+  The data shows no such reports after 2014.
+- (Graphs can be found in the Jupyter notebook.)
+
+
+DEMOGRAPHIC INFORMATION
+- Graffiti
+    - percent white ~ 57%
+    - percent_below_poverty ~ 20%
+    - average_house_hold_size ~ 3.02
+- Potholes
+    - percent white ~ 57%
+    - percent below poverty ~ 18%
+    - average household size ~ 2.63
+- Sanitation
+    - percent white ~ 50%
+    - percent below poverty ~ 21%
+    - average household size ~ 2.70
+- Vacant/Abandoned Buildings
+    - percent white ~ 16%
+    - percent below poverty ~ 33%
+    - average household size ~ 2.87
+
+For graffiti, potholes, and sanitation complaints, these areas are racially similar to 
+the Cook County average of about 57%. However, areas reporting vacant/abandoned buildings 
+are significantly more racially diverse and include more individuals living below the poverty 
+line when compared to the other three report types.
+
+Each of these report types tends to come from areas with significantly more poverty than
+the Cook County average of about 7.5%.
+
+
