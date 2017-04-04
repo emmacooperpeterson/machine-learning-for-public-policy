@@ -64,9 +64,31 @@ DEMOGRAPHIC INFORMATION
 For graffiti, potholes, and sanitation complaints, these areas are racially similar to 
 the Cook County average of about 57%. However, areas reporting vacant/abandoned buildings 
 are significantly more racially diverse and include more individuals living below the poverty 
-line when compared to the other three report types.
+line when compared to the other three report types. Each of these report types tends to come 
+from areas with significantly more poverty than the Cook County average of about 7.5%.
 
-Each of these report types tends to come from areas with significantly more poverty than
-the Cook County average of about 7.5%.
+PROBLEM 3 PART A
+7500 S. Wolcott Ave is located in Ward 17 according to the City of Chicago: 
+https://www.cityofchicago.org/city/en/depts/mayor/iframe/lookup_ward_and_alderman.html
+
+Conditional probabilities for Ward 17:
+Graffiti ~ .19%
+Potholes ~ .5% (most likely)
+Sanitation ~ .27%
+Vacant ~ .33%
+
+PROBLEM 3 PART B
+Lawndale includes Wards 22 and 24
+Uptown includes Wards 46 and 47
+
+Conditional probability for Lawndale ~ 51%
+Conditional probability for Uptown ~ 49%
+
+It is slightly more likely that a call about graffiti came from Lawndale
+rather than Uptown.
 
 
+PROBLEM 3 PART C
+Conditional probability for Englewood ~ 38%
+Conditional probability for Uptown ~ 62%
+It's about 23% more likely that this call came from Uptown.
