@@ -18,3 +18,5 @@ Output is saved in assignment_two_output.txt
 Charts are saved as: age_hist.png, monthly_income_box.png, 
     number_of_dependents_hist.png, serious_dlqin2yrs.png, 
     and zipcode_pie.png
+    
+Writeup describing process and results is in writeup.txt
