@@ -1,0 +1,464 @@
+Overview
+
+Rows: 150000 Columns: 13
+
+Column names:  ['PersonID', 'SeriousDlqin2yrs', 'RevolvingUtilizationOfUnsecuredLines', 'age', 'zipcode', 'NumberOfTime30-59DaysPastDueNotWorse', 'DebtRatio', 'MonthlyIncome', 'NumberOfOpenCreditLinesAndLoans', 'NumberOfTimes90DaysLate', 'NumberRealEstateLoansOrLines', 'NumberOfTime60-89DaysPastDueNotWorse', 'NumberOfDependents']
+
+Data types
+PersonID                                  int64
+SeriousDlqin2yrs                          int64
+RevolvingUtilizationOfUnsecuredLines    float64
+age                                       int64
+zipcode                                   int64
+NumberOfTime30-59DaysPastDueNotWorse      int64
+DebtRatio                               float64
+MonthlyIncome                           float64
+NumberOfOpenCreditLinesAndLoans           int64
+NumberOfTimes90DaysLate                   int64
+NumberRealEstateLoansOrLines              int64
+NumberOfTime60-89DaysPastDueNotWorse      int64
+NumberOfDependents                      float64
+dtype: object
+
+Nulls
+
+value                                  False  True 
+variable                                           
+DebtRatio                             150000      0
+MonthlyIncome                         120269  29731
+NumberOfDependents                    146076   3924
+NumberOfOpenCreditLinesAndLoans       150000      0
+NumberOfTime30-59DaysPastDueNotWorse  150000      0
+NumberOfTime60-89DaysPastDueNotWorse  150000      0
+NumberOfTimes90DaysLate               150000      0
+NumberRealEstateLoansOrLines          150000      0
+PersonID                              150000      0
+RevolvingUtilizationOfUnsecuredLines  150000      0
+SeriousDlqin2yrs                      150000      0
+age                                   150000      0
+zipcode                               150000      0
+
+Describe Data
+
+            PersonID  SeriousDlqin2yrs  RevolvingUtilizationOfUnsecuredLines  \
+count  150000.000000     150000.000000                         150000.000000   
+mean    75000.500000          0.066840                              6.048438   
+std     43301.414527          0.249746                            249.755371   
+min         1.000000          0.000000                              0.000000   
+25%     37500.750000          0.000000                              0.029867   
+50%     75000.500000          0.000000                              0.154181   
+75%    112500.250000          0.000000                              0.559046   
+max    150000.000000          1.000000                          50708.000000   
+
+                 age        zipcode  NumberOfTime30-59DaysPastDueNotWorse  \
+count  150000.000000  150000.000000                         150000.000000   
+mean       52.295207   60648.810013                              0.421033   
+std        14.771866      56.748197                              4.192781   
+min         0.000000   60601.000000                              0.000000   
+25%        41.000000   60625.000000                              0.000000   
+50%        52.000000   60629.000000                              0.000000   
+75%        63.000000   60644.000000                              0.000000   
+max       109.000000   60804.000000                             98.000000   
+
+           DebtRatio  MonthlyIncome  NumberOfOpenCreditLinesAndLoans  \
+count  150000.000000   1.202690e+05                    150000.000000   
+mean      353.005076   6.670221e+03                         8.452760   
+std      2037.818523   1.438467e+04                         5.145951   
+min         0.000000   0.000000e+00                         0.000000   
+25%         0.175074   3.400000e+03                         5.000000   
+50%         0.366508   5.400000e+03                         8.000000   
+75%         0.868254   8.249000e+03                        11.000000   
+max    329664.000000   3.008750e+06                        58.000000   
+
+       NumberOfTimes90DaysLate  NumberRealEstateLoansOrLines  \
+count            150000.000000                 150000.000000   
+mean                  0.265973                      1.018240   
+std                   4.169304                      1.129771   
+min                   0.000000                      0.000000   
+25%                   0.000000                      0.000000   
+50%                   0.000000                      1.000000   
+75%                   0.000000                      2.000000   
+max                  98.000000                     54.000000   
+
+       NumberOfTime60-89DaysPastDueNotWorse  NumberOfDependents  
+count                         150000.000000       146076.000000  
+mean                               0.240387            0.757222  
+std                                4.155179            1.115086  
+min                                0.000000            0.000000  
+25%                                0.000000            0.000000  
+50%                                0.000000            0.000000  
+75%                                0.000000            1.000000  
+max                               98.000000           20.000000  
+
+Distributions
+
+0.000000     86902
+1.000000     26316
+2.000000     19522
+3.000000      9483
+0.757222      3924
+4.000000      2862
+5.000000       746
+6.000000       158
+7.000000        51
+8.000000        24
+9.000000         5
+10.000000        5
+13.000000        1
+20.000000        1
+Name: number_of_dependents, dtype: int64
+
+chart saved
+
+0    139974
+1     10026
+Name: serious_dlqin2yrs, dtype: int64
+
+chart saved
+chart saved
+chart saved
+chart saved
+
+
+bins: monthly_income
+['0: 0.0 - 2325.0', '1: 2325.0 - 3400.0', '2: 3400.0 - 4333.0', '3: 4333.0 - 5400.0', '4: 5400.0 - 6600.0', '5: 6600.0 - 6670.221237392844', '6: 6670.221237392844 - 6670.221237392845', '7: 6670.221237392845 - 8250.0', '8: 8250.0 - 10750.0', '9: 10750.0 - 3008749.999964648']
+
+
+
+['person_id']
+
+LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+
+classification report: ['person_id']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.00      0.00      0.00     10026
+
+avg / total       0.87      0.93      0.90    150000
+
+
+confusion matrix: ['person_id']
+[[139974      0]
+ [ 10026      0]]
+
+accuracy score (on training set): ['person_id']
+0.93316
+
+
+
+
+['revolving_utilization_of_unsecured_lines']
+
+LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+
+classification report: ['revolving_utilization_of_unsecured_lines']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.00      0.00      0.00     10026
+
+avg / total       0.87      0.93      0.90    150000
+
+
+confusion matrix: ['revolving_utilization_of_unsecured_lines']
+[[139974      0]
+ [ 10026      0]]
+
+accuracy score (on training set): ['revolving_utilization_of_unsecured_lines']
+0.93316
+
+
+
+
+['age']
+
+LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+
+classification report: ['age']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.00      0.00      0.00     10026
+
+avg / total       0.87      0.93      0.90    150000
+
+
+confusion matrix: ['age']
+[[139974      0]
+ [ 10026      0]]
+
+accuracy score (on training set): ['age']
+0.93316
+
+
+
+
+['zipcode']
+
+LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+
+classification report: ['zipcode']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.00      0.00      0.00     10026
+
+avg / total       0.87      0.93      0.90    150000
+
+
+confusion matrix: ['zipcode']
+[[139974      0]
+ [ 10026      0]]
+
+accuracy score (on training set): ['zipcode']
+0.93316
+
+
+
+
+['number_of_time30-59_days_past_due_not_worse']
+
+LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+
+classification report: ['number_of_time30-59_days_past_due_not_worse']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.55      0.01      0.03     10026
+
+avg / total       0.91      0.93      0.90    150000
+
+
+confusion matrix: ['number_of_time30-59_days_past_due_not_worse']
+[[139852    122]
+ [  9879    147]]
+
+accuracy score (on training set): ['number_of_time30-59_days_past_due_not_worse']
+0.933326666667
+
+
+
+
+['debt_ratio']
+
+LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+
+classification report: ['debt_ratio']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.00      0.00      0.00     10026
+
+avg / total       0.87      0.93      0.90    150000
+
+
+confusion matrix: ['debt_ratio']
+[[139974      0]
+ [ 10026      0]]
+
+accuracy score (on training set): ['debt_ratio']
+0.93316
+
+
+
+
+['monthly_income']
+
+LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+
+classification report: ['monthly_income']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.00      0.00      0.00     10026
+
+avg / total       0.87      0.93      0.90    150000
+
+
+confusion matrix: ['monthly_income']
+[[139974      0]
+ [ 10026      0]]
+
+accuracy score (on training set): ['monthly_income']
+0.93316
+
+
+
+
+['number_of_open_credit_lines_and_loans']
+
+LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+
+classification report: ['number_of_open_credit_lines_and_loans']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.00      0.00      0.00     10026
+
+avg / total       0.87      0.93      0.90    150000
+
+
+confusion matrix: ['number_of_open_credit_lines_and_loans']
+[[139974      0]
+ [ 10026      0]]
+
+accuracy score (on training set): ['number_of_open_credit_lines_and_loans']
+0.93316
+
+
+
+
+['number_of_times90_days_late']
+
+LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+
+classification report: ['number_of_times90_days_late']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.55      0.01      0.03     10026
+
+avg / total       0.91      0.93      0.90    150000
+
+
+confusion matrix: ['number_of_times90_days_late']
+[[139852    122]
+ [  9879    147]]
+
+accuracy score (on training set): ['number_of_times90_days_late']
+0.933326666667
+
+
+
+
+['number_real_estate_loans_or_lines']
+
+LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+
+classification report: ['number_real_estate_loans_or_lines']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.00      0.00      0.00     10026
+
+avg / total       0.87      0.93      0.90    150000
+
+
+confusion matrix: ['number_real_estate_loans_or_lines']
+[[139974      0]
+ [ 10026      0]]
+
+accuracy score (on training set): ['number_real_estate_loans_or_lines']
+0.93316
+
+
+
+
+['number_of_time60-89_days_past_due_not_worse']
+
+LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+
+classification report: ['number_of_time60-89_days_past_due_not_worse']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.55      0.01      0.03     10026
+
+avg / total       0.91      0.93      0.90    150000
+
+
+confusion matrix: ['number_of_time60-89_days_past_due_not_worse']
+[[139852    122]
+ [  9879    147]]
+
+accuracy score (on training set): ['number_of_time60-89_days_past_due_not_worse']
+0.933326666667
+
+
+
+
+['number_of_dependents']
+
+LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+
+classification report: ['number_of_dependents']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.00      0.00      0.00     10026
+
+avg / total       0.87      0.93      0.90    150000
+
+
+confusion matrix: ['number_of_dependents']
+[[139973      1]
+ [ 10026      0]]
+
+accuracy score (on training set): ['number_of_dependents']
+0.933153333333
+
+
+
+
+['monthly_income_categories']
+
+LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+
+classification report: ['monthly_income_categories']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.00      0.00      0.00     10026
+
+avg / total       0.87      0.93      0.90    150000
+
+
+confusion matrix: ['monthly_income_categories']
+[[139974      0]
+ [ 10026      0]]
+
+accuracy score (on training set): ['monthly_income_categories']
+0.93316
+
+
+
