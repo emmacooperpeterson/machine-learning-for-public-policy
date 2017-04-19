@@ -55,17 +55,18 @@ print()
 
 
 #generate features
-df = gf.create_dummies(df, 'serious_dlqin2yrs')
 df = gf.bin_data(df, 'monthly_income', 10)
+df = gf.bin_data(df, 'age', 3)
+df = gf.create_dummies(df, 'age_categories')
 print()
 print()
 
 
 #logistic regression
-target = 'serious_dlqin2yrs_1'
+target = 'serious_dlqin2yrs'
 
 for column in df.columns:
-    if column != 'serious_dlqin2yrs_1' and column != 'serious_dlqin2yrs_0':
+    if column != 'serious_dlqin2yrs':
         feature = column 
         model = c.regression(df, [feature], target)
         c.evaluate_regression(model, df, [feature], target)

@@ -121,7 +121,9 @@ chart saved
 
 
 bins: monthly_income
-['0: 0.0 - 2325.0', '1: 2325.0 - 3400.0', '2: 3400.0 - 4333.0', '3: 4333.0 - 5400.0', '4: 5400.0 - 6600.0', '5: 6600.0 - 6670.221237392844', '6: 6670.221237392844 - 6670.221237392845', '7: 6670.221237392845 - 8250.0', '8: 8250.0 - 10750.0', '9: 10750.0 - 3008749.999964648']
+['0: 0.0 - 2325.0', '1: 2325.0 - 3400.0', '2: 3400.0 - 4333.0', '3: 4333.0 - 5400.0', '4: 5400.0 - 6600.0', '5: 6600.0 - 6670.221237392844', '6: 6670.221237392844 - 6670.221237392845', '7: 6670.221237392845 - 8250.0', '8: 8250.0 - 10750.0', '9: 10750.0 - 3008749.999964648', '10: 3008749.999964648 - 3008750.0']
+bins: age
+['0: 0.0 - 45.0', '1: 45.0 - 59.0', '2: 59.0 - 109.0']
 
 
 
@@ -458,6 +460,84 @@ confusion matrix: ['monthly_income_categories']
  [ 10026      0]]
 
 accuracy score (on training set): ['monthly_income_categories']
+0.93316
+
+
+
+
+['age_categories_0']
+
+LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+
+classification report: ['age_categories_0']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.00      0.00      0.00     10026
+
+avg / total       0.87      0.93      0.90    150000
+
+
+confusion matrix: ['age_categories_0']
+[[139974      0]
+ [ 10026      0]]
+
+accuracy score (on training set): ['age_categories_0']
+0.93316
+
+
+
+
+['age_categories_1']
+
+LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+
+classification report: ['age_categories_1']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.00      0.00      0.00     10026
+
+avg / total       0.87      0.93      0.90    150000
+
+
+confusion matrix: ['age_categories_1']
+[[139974      0]
+ [ 10026      0]]
+
+accuracy score (on training set): ['age_categories_1']
+0.93316
+
+
+
+
+['age_categories_2']
+
+LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+
+classification report: ['age_categories_2']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.00      0.00      0.00     10026
+
+avg / total       0.87      0.93      0.90    150000
+
+
+confusion matrix: ['age_categories_2']
+[[139974      0]
+ [ 10026      0]]
+
+accuracy score (on training set): ['age_categories_2']
 0.93316
 
 

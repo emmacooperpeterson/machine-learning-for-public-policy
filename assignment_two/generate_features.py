@@ -30,10 +30,12 @@ def bin_data(df, column, num_percentiles=4):
 
         column_bin = df.quantile(q=value)[column]
 
+
         if value < 1:
             bins.append(column_bin)
 
         value += base_value
+
     
     if df[column].max() not in bins:
         bin_max = df.max()[column]
@@ -48,7 +50,7 @@ def bin_data(df, column, num_percentiles=4):
 
     bin_ranges = []
     for i, val in enumerate(bin_names):
-        if i + 1 < len(bin_names):
+        if i + 1 <= len(bin_names):
             low = bins[i]
             high = bins[i+1]
             bin_ranges.append('{}: {} - {}'.format(bin_names[i], low, high))
