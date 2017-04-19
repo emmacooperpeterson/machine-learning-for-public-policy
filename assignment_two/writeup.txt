@@ -1,0 +1,39 @@
+My code for this assignment can perform the following tasks:
+
+- Read data into a dataframe
+- Fill in missing values
+- Covert column names to snake_case
+- Review the dataframe’s shape, column headers, and data types
+- View how many values are missing in each column
+- Obtain a count for each unique value in a column
+- View descriptive statistics (min, max, mean, etc.) for each column
+- Create a histogram, box plot, or pie chart for a given column
+- Discretize a continuous variable into categorical bins based on percentiles
+- Create dummy variables from a categorical variable
+- Run a logistic regression
+- View some evaluation metrics based on the regression, including precision, recall, accuracy, etc.
+
+
+On the provided data:
+
+- Created an overview and saw that there were some values missing in two columns – filled those cells with the mean of their respective columns
+- Reviewed the distributions for some of the columns by creating charts and frequency counts (these functions could be performed on any column)
+- Binned monthly incomes into ranges based on percentile (ten percentiles)
+- Binned age into ranges based on percentiles (three percentiles)
+- Created dummy variables on age, describing whether or not a given observation falls into a given age bin
+- Ran a logistic regression with the output variable ‘SeriousDlqin2yrs’, using each column individually as a feature – combinations of columns could also be used as features, but columns were just used individually for the purpose of this assignment
+
+
+Results (using training data = testing data):
+
+- 93% of observations were ‘no’ for SeriousDlqin2yrs, so simply predicting ‘no’ on everything would result in 93% accuracy.
+- Each feature variable produced relatively high precision (~.87) and recall (~.93)
+- Confusion matrices showed that most feature variables led to zero false positives and zero false negatives.
+- NumberOfTimes30-59DaysPastDueNotWorse, NumberOfTimes90DaysLate, and NumberOfTimes60-89DaysPastDueNotWorse achieved slightly higher precision (.91), as well as an accuracy score just slightly better than random (.9333 > .9331)
+- Using training sets / test sets would yield more accurate/meaningful results.
+- Combining features may also help to produce higher precision/accuracy.
+
+
+
+
+
