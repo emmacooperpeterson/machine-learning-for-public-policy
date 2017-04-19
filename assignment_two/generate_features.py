@@ -12,6 +12,11 @@ def bin_data(df, column, num_percentiles=4):
     Return:
         df: returns original dataframe, now with an additional column including
             the category names associated with each observation
+        
+        Also prints the range of values for each bin
+    
+    In the future: create another function that creates bins with equal ranges,
+                    rather than basing ranges on percentages
     
     '''
 
@@ -47,24 +52,27 @@ def bin_data(df, column, num_percentiles=4):
             low = bins[i]
             high = bins[i+1]
             bin_ranges.append('{}: {} - {}'.format(bin_names[i], low, high))
+        
+    for index, row in df.iterrows():
+        if df.ix[index, column] == 0:
+            df.set_value(index, '{}_categories'.format(column), 0.0)
 
     print('bins: {}'.format(column))
     print(bin_ranges)
-    return df
-
-def fix_bins(df):
-
-    for index, row in df.iterrows():
-        if df.ix[index, 'monthly_income'] == 0:
-            df.set_value(index, 'monthly_income_categories', 0.0)
-        
+    
     return df
 
 
 def create_dummies(df, column):
-    '''create new columns with dummy variables based on the given column
+    '''Create new columns with dummy variables based on the given column.
+
+    Inputs:
+        df: dataframe
+        column: dataframe column from which dummies should be created
     
-    creates as many new columns as there are unique variables in the original column'''
+    Return:
+        new dataframe with additional columns (original column is removed)
+    '''
 
     new_df = pd.get_dummies(df, columns=[column])
 

@@ -9,7 +9,17 @@ from sklearn import preprocessing
 
 def regression(df, features, target):
 
-    #fit model to data
+    '''Runs logistic regression
+
+    Inputs:
+        df: dataframe
+        features: list
+        target: string
+    
+    Return:
+        model
+    '''
+
     model = LogisticRegression()
     model.fit(df[features], df[target])
 
@@ -21,13 +31,26 @@ def regression(df, features, target):
 
     return model
 
+
 def evaluate_regression(model, df, features, target):
+
+    '''Provides some evaluation metrics for the regression obtained above
+
+    Inputs:
+        model: model from regression function (above)
+        df: dataframe
+        features: list
+        target: string
+    
+    Return:
+        Prints some evaluation metrics
+    '''
 
     #make predictions
     expected = df[target]
     predicted = model.predict(df[features])
     
-    #Text summary of the precision, recall, F1 score for each class
+    #summary of the precision, recall, F1 score for each class
     print('classification report: {}'.format(features))
     print(metrics.classification_report(expected, predicted)) 
     print()

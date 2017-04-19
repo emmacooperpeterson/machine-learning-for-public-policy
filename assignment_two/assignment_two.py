@@ -57,7 +57,6 @@ print()
 #generate features
 df = gf.create_dummies(df, 'serious_dlqin2yrs')
 df = gf.bin_data(df, 'monthly_income', 10)
-df = gf.fix_bins(df)
 print()
 print()
 
