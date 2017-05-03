@@ -1,1 +1,2 @@
-# machine-learning-for-public-policy
+#CAPP 30254: Machine Learning for Public Policy
+
