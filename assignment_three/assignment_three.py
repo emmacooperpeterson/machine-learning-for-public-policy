@@ -54,7 +54,7 @@ for column, fill in fillers.items():
 
 #view some distributions
 
-ed.get_plot(df, plot_type='correlation')
+ed.get_plot(df, plot_type='correlation', title='Credit Data')
 
 print('Distributions')
 print()
