@@ -1,0 +1,270 @@
+Rows: 150000 Columns: 13
+
+Column names:  ['PersonID', 'SeriousDlqin2yrs', 'RevolvingUtilizationOfUnsecuredLines', 'age', 'zipcode', 'NumberOfTime30-59DaysPastDueNotWorse', 'DebtRatio', 'MonthlyIncome', 'NumberOfOpenCreditLinesAndLoans', 'NumberOfTimes90DaysLate', 'NumberRealEstateLoansOrLines', 'NumberOfTime60-89DaysPastDueNotWorse', 'NumberOfDependents']
+
+PersonID                                  int64
+SeriousDlqin2yrs                          int64
+RevolvingUtilizationOfUnsecuredLines    float64
+age                                       int64
+zipcode                                   int64
+NumberOfTime30-59DaysPastDueNotWorse      int64
+DebtRatio                               float64
+MonthlyIncome                           float64
+NumberOfOpenCreditLinesAndLoans           int64
+NumberOfTimes90DaysLate                   int64
+NumberRealEstateLoansOrLines              int64
+NumberOfTime60-89DaysPastDueNotWorse      int64
+NumberOfDependents                      float64
+dtype: object
+
+
+
+bins:
+['0: 0.0 - 2325.0', '1: 2325.0 - 3400.0', '2: 3400.0 - 4333.0', '3: 4333.0 - 5400.0', '4: 5400.0 - 6600.0', '5: 6600.0 - 6670.221237392844', '6: 6670.221237392844 - 6670.221237392845', '7: 6670.221237392845 - 8250.0', '8: 8250.0 - 10750.0', '9: 10750.0 - 3008749.999964648']
+['person_id']
+
+classification report: ['person_id']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.00      0.00      0.00     10026
+
+avg / total       0.87      0.93      0.90    150000
+
+
+confusion matrix: ['person_id']
+[[139974      0]
+ [ 10026      0]]
+
+accuracy score (on training set): ['person_id']
+0.93316
+
+
+['revolving_utilization_of_unsecured_lines']
+
+classification report: ['revolving_utilization_of_unsecured_lines']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.00      0.00      0.00     10026
+
+avg / total       0.87      0.93      0.90    150000
+
+
+confusion matrix: ['revolving_utilization_of_unsecured_lines']
+[[139974      0]
+ [ 10026      0]]
+
+accuracy score (on training set): ['revolving_utilization_of_unsecured_lines']
+0.93316
+
+
+['age']
+
+classification report: ['age']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.00      0.00      0.00     10026
+
+avg / total       0.87      0.93      0.90    150000
+
+
+confusion matrix: ['age']
+[[139974      0]
+ [ 10026      0]]
+
+accuracy score (on training set): ['age']
+0.93316
+
+
+['zipcode']
+
+classification report: ['zipcode']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.00      0.00      0.00     10026
+
+avg / total       0.87      0.93      0.90    150000
+
+
+confusion matrix: ['zipcode']
+[[139974      0]
+ [ 10026      0]]
+
+accuracy score (on training set): ['zipcode']
+0.93316
+
+
+['number_of_time30-59_days_past_due_not_worse']
+
+classification report: ['number_of_time30-59_days_past_due_not_worse']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.55      0.01      0.03     10026
+
+avg / total       0.91      0.93      0.90    150000
+
+
+confusion matrix: ['number_of_time30-59_days_past_due_not_worse']
+[[139852    122]
+ [  9879    147]]
+
+accuracy score (on training set): ['number_of_time30-59_days_past_due_not_worse']
+0.933326666667
+
+
+['debt_ratio']
+
+classification report: ['debt_ratio']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.00      0.00      0.00     10026
+
+avg / total       0.87      0.93      0.90    150000
+
+
+confusion matrix: ['debt_ratio']
+[[139974      0]
+ [ 10026      0]]
+
+accuracy score (on training set): ['debt_ratio']
+0.93316
+
+
+['monthly_income']
+
+classification report: ['monthly_income']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.00      0.00      0.00     10026
+
+avg / total       0.87      0.93      0.90    150000
+
+
+confusion matrix: ['monthly_income']
+[[139974      0]
+ [ 10026      0]]
+
+accuracy score (on training set): ['monthly_income']
+0.93316
+
+
+['number_of_open_credit_lines_and_loans']
+
+classification report: ['number_of_open_credit_lines_and_loans']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.00      0.00      0.00     10026
+
+avg / total       0.87      0.93      0.90    150000
+
+
+confusion matrix: ['number_of_open_credit_lines_and_loans']
+[[139974      0]
+ [ 10026      0]]
+
+accuracy score (on training set): ['number_of_open_credit_lines_and_loans']
+0.93316
+
+
+['number_of_times90_days_late']
+
+classification report: ['number_of_times90_days_late']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.55      0.01      0.03     10026
+
+avg / total       0.91      0.93      0.90    150000
+
+
+confusion matrix: ['number_of_times90_days_late']
+[[139852    122]
+ [  9879    147]]
+
+accuracy score (on training set): ['number_of_times90_days_late']
+0.933326666667
+
+
+['number_real_estate_loans_or_lines']
+
+classification report: ['number_real_estate_loans_or_lines']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.00      0.00      0.00     10026
+
+avg / total       0.87      0.93      0.90    150000
+
+
+confusion matrix: ['number_real_estate_loans_or_lines']
+[[139974      0]
+ [ 10026      0]]
+
+accuracy score (on training set): ['number_real_estate_loans_or_lines']
+0.93316
+
+
+['number_of_time60-89_days_past_due_not_worse']
+
+classification report: ['number_of_time60-89_days_past_due_not_worse']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.55      0.01      0.03     10026
+
+avg / total       0.91      0.93      0.90    150000
+
+
+confusion matrix: ['number_of_time60-89_days_past_due_not_worse']
+[[139852    122]
+ [  9879    147]]
+
+accuracy score (on training set): ['number_of_time60-89_days_past_due_not_worse']
+0.933326666667
+
+
+['number_of_dependents']
+
+classification report: ['number_of_dependents']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.00      0.00      0.00     10026
+
+avg / total       0.87      0.93      0.90    150000
+
+
+confusion matrix: ['number_of_dependents']
+[[139973      1]
+ [ 10026      0]]
+
+accuracy score (on training set): ['number_of_dependents']
+0.933153333333
+
+
+['monthly_income_categories']
+
+classification report: ['monthly_income_categories']
+             precision    recall  f1-score   support
+
+          0       0.93      1.00      0.97    139974
+          1       0.00      0.00      0.00     10026
+
+avg / total       0.87      0.93      0.90    150000
+
+
+confusion matrix: ['monthly_income_categories']
+[[139974      0]
+ [ 10026      0]]
+
+accuracy score (on training set): ['monthly_income_categories']
+0.93316
+
+

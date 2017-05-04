@@ -1,0 +1,414 @@
+Overview
+
+Rows: 150000 Columns: 13
+
+Column names:  ['PersonID', 'SeriousDlqin2yrs', 'RevolvingUtilizationOfUnsecuredLines', 'age', 'zipcode', 'NumberOfTime30-59DaysPastDueNotWorse', 'DebtRatio', 'MonthlyIncome', 'NumberOfOpenCreditLinesAndLoans', 'NumberOfTimes90DaysLate', 'NumberRealEstateLoansOrLines', 'NumberOfTime60-89DaysPastDueNotWorse', 'NumberOfDependents']
+
+Data types
+PersonID                                  int64
+SeriousDlqin2yrs                          int64
+RevolvingUtilizationOfUnsecuredLines    float64
+age                                       int64
+zipcode                                   int64
+NumberOfTime30-59DaysPastDueNotWorse      int64
+DebtRatio                               float64
+MonthlyIncome                           float64
+NumberOfOpenCreditLinesAndLoans           int64
+NumberOfTimes90DaysLate                   int64
+NumberRealEstateLoansOrLines              int64
+NumberOfTime60-89DaysPastDueNotWorse      int64
+NumberOfDependents                      float64
+dtype: object
+
+Nulls
+
+value                                  False  True 
+variable                                           
+DebtRatio                             150000      0
+MonthlyIncome                         120269  29731
+NumberOfDependents                    146076   3924
+NumberOfOpenCreditLinesAndLoans       150000      0
+NumberOfTime30-59DaysPastDueNotWorse  150000      0
+NumberOfTime60-89DaysPastDueNotWorse  150000      0
+NumberOfTimes90DaysLate               150000      0
+NumberRealEstateLoansOrLines          150000      0
+PersonID                              150000      0
+RevolvingUtilizationOfUnsecuredLines  150000      0
+SeriousDlqin2yrs                      150000      0
+age                                   150000      0
+zipcode                               150000      0
+
+Describe Data
+
+            PersonID  SeriousDlqin2yrs  RevolvingUtilizationOfUnsecuredLines  \
+count  150000.000000     150000.000000                         150000.000000   
+mean    75000.500000          0.066840                              6.048438   
+std     43301.414527          0.249746                            249.755371   
+min         1.000000          0.000000                              0.000000   
+25%     37500.750000          0.000000                              0.029867   
+50%     75000.500000          0.000000                              0.154181   
+75%    112500.250000          0.000000                              0.559046   
+max    150000.000000          1.000000                          50708.000000   
+
+                 age        zipcode  NumberOfTime30-59DaysPastDueNotWorse  \
+count  150000.000000  150000.000000                         150000.000000   
+mean       52.295207   60648.810013                              0.421033   
+std        14.771866      56.748197                              4.192781   
+min         0.000000   60601.000000                              0.000000   
+25%        41.000000   60625.000000                              0.000000   
+50%        52.000000   60629.000000                              0.000000   
+75%        63.000000   60644.000000                              0.000000   
+max       109.000000   60804.000000                             98.000000   
+
+           DebtRatio  MonthlyIncome  NumberOfOpenCreditLinesAndLoans  \
+count  150000.000000   1.202690e+05                    150000.000000   
+mean      353.005076   6.670221e+03                         8.452760   
+std      2037.818523   1.438467e+04                         5.145951   
+min         0.000000   0.000000e+00                         0.000000   
+25%         0.175074   3.400000e+03                         5.000000   
+50%         0.366508   5.400000e+03                         8.000000   
+75%         0.868254   8.249000e+03                        11.000000   
+max    329664.000000   3.008750e+06                        58.000000   
+
+       NumberOfTimes90DaysLate  NumberRealEstateLoansOrLines  \
+count            150000.000000                 150000.000000   
+mean                  0.265973                      1.018240   
+std                   4.169304                      1.129771   
+min                   0.000000                      0.000000   
+25%                   0.000000                      0.000000   
+50%                   0.000000                      1.000000   
+75%                   0.000000                      2.000000   
+max                  98.000000                     54.000000   
+
+       NumberOfTime60-89DaysPastDueNotWorse  NumberOfDependents  
+count                         150000.000000       146076.000000  
+mean                               0.240387            0.757222  
+std                                4.155179            1.115086  
+min                                0.000000            0.000000  
+25%                                0.000000            0.000000  
+50%                                0.000000            0.000000  
+75%                                0.000000            1.000000  
+max                               98.000000           20.000000  
+
+serious_dlqin2yrs mode
+number_of_time60-89_days_past_due_not_worse median
+number_real_estate_loans_or_lines mean
+number_of_dependents median
+zipcode mode
+number_of_time30-59_days_past_due_not_worse median
+monthly_income median
+number_of_open_credit_lines_and_loans mode
+revolving_utilization_of_unsecured_lines mean
+debt_ratio median
+number_of_times90_days_late median
+age mean
+chart saved
+Distributions
+
+0.0     90826
+1.0     26316
+2.0     19522
+3.0      9483
+4.0      2862
+5.0       746
+6.0       158
+7.0        51
+8.0        24
+9.0         5
+10.0        5
+13.0        1
+20.0        1
+Name: number_of_dependents, dtype: int64
+
+chart saved
+
+0    139974
+1     10026
+Name: serious_dlqin2yrs, dtype: int64
+
+chart saved
+chart saved
+chart saved
+chart saved
+
+
+
+
+GB
+{'max_depth': 5, 'learning_rate': 0.1, 'subsample': 0.3, 'n_estimators': 10}
+{'max_depth': 5, 'learning_rate': 0.1, 'subsample': 1.0, 'n_estimators': 10}
+{'max_depth': 5, 'learning_rate': 0.1, 'subsample': 0.3, 'n_estimators': 100}
+{'max_depth': 5, 'learning_rate': 0.1, 'subsample': 1.0, 'n_estimators': 100}
+{'max_depth': 50, 'learning_rate': 0.1, 'subsample': 0.3, 'n_estimators': 10}
+{'max_depth': 50, 'learning_rate': 0.1, 'subsample': 1.0, 'n_estimators': 10}
+{'max_depth': 50, 'learning_rate': 0.1, 'subsample': 0.3, 'n_estimators': 100}
+{'max_depth': 50, 'learning_rate': 0.1, 'subsample': 1.0, 'n_estimators': 100}
+{'max_depth': 5, 'learning_rate': 0.5, 'subsample': 0.3, 'n_estimators': 10}
+{'max_depth': 5, 'learning_rate': 0.5, 'subsample': 1.0, 'n_estimators': 10}
+{'max_depth': 5, 'learning_rate': 0.5, 'subsample': 0.3, 'n_estimators': 100}
+{'max_depth': 5, 'learning_rate': 0.5, 'subsample': 1.0, 'n_estimators': 100}
+{'max_depth': 50, 'learning_rate': 0.5, 'subsample': 0.3, 'n_estimators': 10}
+{'max_depth': 50, 'learning_rate': 0.5, 'subsample': 1.0, 'n_estimators': 10}
+{'max_depth': 50, 'learning_rate': 0.5, 'subsample': 0.3, 'n_estimators': 100}
+{'max_depth': 50, 'learning_rate': 0.5, 'subsample': 1.0, 'n_estimators': 100}
+AB
+{'n_estimators': 10, 'algorithm': 'SAMME'}
+{'n_estimators': 1000, 'algorithm': 'SAMME'}
+{'n_estimators': 10, 'algorithm': 'SAMME.R'}
+{'n_estimators': 1000, 'algorithm': 'SAMME.R'}
+LR
+{'C': 1, 'penalty': 'l1'}
+{'C': 1, 'penalty': 'l2'}
+{'C': 10, 'penalty': 'l1'}
+{'C': 10, 'penalty': 'l2'}
+RF
+{'max_features': 'sqrt', 'max_depth': 5, 'min_samples_split': 2, 'n_estimators': 10}
+{'max_features': 'sqrt', 'max_depth': 5, 'min_samples_split': 2, 'n_estimators': 100}
+{'max_features': 'sqrt', 'max_depth': 5, 'min_samples_split': 10, 'n_estimators': 10}
+{'max_features': 'sqrt', 'max_depth': 5, 'min_samples_split': 10, 'n_estimators': 100}
+{'max_features': 'log2', 'max_depth': 5, 'min_samples_split': 2, 'n_estimators': 10}
+{'max_features': 'log2', 'max_depth': 5, 'min_samples_split': 2, 'n_estimators': 100}
+{'max_features': 'log2', 'max_depth': 5, 'min_samples_split': 10, 'n_estimators': 10}
+{'max_features': 'log2', 'max_depth': 5, 'min_samples_split': 10, 'n_estimators': 100}
+{'max_features': 'sqrt', 'max_depth': 50, 'min_samples_split': 2, 'n_estimators': 10}
+{'max_features': 'sqrt', 'max_depth': 50, 'min_samples_split': 2, 'n_estimators': 100}
+{'max_features': 'sqrt', 'max_depth': 50, 'min_samples_split': 10, 'n_estimators': 10}
+{'max_features': 'sqrt', 'max_depth': 50, 'min_samples_split': 10, 'n_estimators': 100}
+{'max_features': 'log2', 'max_depth': 50, 'min_samples_split': 2, 'n_estimators': 10}
+{'max_features': 'log2', 'max_depth': 50, 'min_samples_split': 2, 'n_estimators': 100}
+{'max_features': 'log2', 'max_depth': 50, 'min_samples_split': 10, 'n_estimators': 10}
+{'max_features': 'log2', 'max_depth': 50, 'min_samples_split': 10, 'n_estimators': 100}
+BAG
+{'max_samples': 0.25, 'n_estimators': 5}
+{'max_samples': 0.25, 'n_estimators': 20}
+{'max_samples': 0.75, 'n_estimators': 5}
+{'max_samples': 0.75, 'n_estimators': 20}
+DT
+{'max_features': 'sqrt', 'criterion': 'gini', 'max_depth': 10, 'min_samples_split': 3}
+{'max_features': 'sqrt', 'criterion': 'gini', 'max_depth': 10, 'min_samples_split': 10}
+{'max_features': 'log2', 'criterion': 'gini', 'max_depth': 10, 'min_samples_split': 3}
+{'max_features': 'log2', 'criterion': 'gini', 'max_depth': 10, 'min_samples_split': 10}
+{'max_features': 'sqrt', 'criterion': 'gini', 'max_depth': 50, 'min_samples_split': 3}
+{'max_features': 'sqrt', 'criterion': 'gini', 'max_depth': 50, 'min_samples_split': 10}
+{'max_features': 'log2', 'criterion': 'gini', 'max_depth': 50, 'min_samples_split': 3}
+{'max_features': 'log2', 'criterion': 'gini', 'max_depth': 50, 'min_samples_split': 10}
+{'max_features': 'sqrt', 'criterion': 'entropy', 'max_depth': 10, 'min_samples_split': 3}
+{'max_features': 'sqrt', 'criterion': 'entropy', 'max_depth': 10, 'min_samples_split': 10}
+{'max_features': 'log2', 'criterion': 'entropy', 'max_depth': 10, 'min_samples_split': 3}
+{'max_features': 'log2', 'criterion': 'entropy', 'max_depth': 10, 'min_samples_split': 10}
+{'max_features': 'sqrt', 'criterion': 'entropy', 'max_depth': 50, 'min_samples_split': 3}
+{'max_features': 'sqrt', 'criterion': 'entropy', 'max_depth': 50, 'min_samples_split': 10}
+{'max_features': 'log2', 'criterion': 'entropy', 'max_depth': 50, 'min_samples_split': 3}
+{'max_features': 'log2', 'criterion': 'entropy', 'max_depth': 50, 'min_samples_split': 10}
+KNN
+{'n_neighbors': 5, 'weights': 'uniform', 'algorithm': 'auto'}
+{'n_neighbors': 5, 'weights': 'distance', 'algorithm': 'auto'}
+{'n_neighbors': 25, 'weights': 'uniform', 'algorithm': 'auto'}
+{'n_neighbors': 25, 'weights': 'distance', 'algorithm': 'auto'}
+{'n_neighbors': 5, 'weights': 'uniform', 'algorithm': 'ball_tree'}
+{'n_neighbors': 5, 'weights': 'distance', 'algorithm': 'ball_tree'}
+{'n_neighbors': 25, 'weights': 'uniform', 'algorithm': 'ball_tree'}
+{'n_neighbors': 25, 'weights': 'distance', 'algorithm': 'ball_tree'}
+   model_type                                         parameters   auc-roc  \
+0          GB  {'max_depth': 5, 'learning_rate': 0.1, 'subsam...  0.856745   
+1          GB  {'max_depth': 5, 'learning_rate': 0.1, 'subsam...  0.852959   
+2          GB  {'max_depth': 5, 'learning_rate': 0.1, 'subsam...  0.861459   
+3          GB  {'max_depth': 5, 'learning_rate': 0.1, 'subsam...  0.864504   
+4          GB  {'max_depth': 50, 'learning_rate': 0.1, 'subsa...  0.744814   
+5          GB  {'max_depth': 50, 'learning_rate': 0.1, 'subsa...  0.650442   
+6          GB  {'max_depth': 50, 'learning_rate': 0.1, 'subsa...  0.836504   
+7          GB  {'max_depth': 50, 'learning_rate': 0.1, 'subsa...  0.824979   
+8          GB  {'max_depth': 5, 'learning_rate': 0.5, 'subsam...  0.853333   
+9          GB  {'max_depth': 5, 'learning_rate': 0.5, 'subsam...  0.859871   
+10         GB  {'max_depth': 5, 'learning_rate': 0.5, 'subsam...  0.830382   
+11         GB  {'max_depth': 5, 'learning_rate': 0.5, 'subsam...  0.852577   
+12         GB  {'max_depth': 50, 'learning_rate': 0.5, 'subsa...  0.531659   
+13         GB  {'max_depth': 50, 'learning_rate': 0.5, 'subsa...  0.614916   
+14         GB  {'max_depth': 50, 'learning_rate': 0.5, 'subsa...  0.521609   
+15         GB  {'max_depth': 50, 'learning_rate': 0.5, 'subsa...  0.826829   
+16         AB         {'n_estimators': 10, 'algorithm': 'SAMME'}  0.835825   
+17         AB       {'n_estimators': 1000, 'algorithm': 'SAMME'}  0.851959   
+18         AB       {'n_estimators': 10, 'algorithm': 'SAMME.R'}  0.848850   
+19         AB     {'n_estimators': 1000, 'algorithm': 'SAMME.R'}  0.855891   
+20         LR                          {'C': 1, 'penalty': 'l1'}  0.698621   
+21         LR                          {'C': 1, 'penalty': 'l2'}  0.658242   
+22         LR                         {'C': 10, 'penalty': 'l1'}  0.699299   
+23         LR                         {'C': 10, 'penalty': 'l2'}  0.658245   
+24         RF  {'max_features': 'sqrt', 'max_depth': 5, 'min_...  0.852269   
+25         RF  {'max_features': 'sqrt', 'max_depth': 5, 'min_...  0.856346   
+26         RF  {'max_features': 'sqrt', 'max_depth': 5, 'min_...  0.853266   
+27         RF  {'max_features': 'sqrt', 'max_depth': 5, 'min_...  0.857002   
+28         RF  {'max_features': 'log2', 'max_depth': 5, 'min_...  0.852996   
+29         RF  {'max_features': 'log2', 'max_depth': 5, 'min_...  0.857178   
+..        ...                                                ...       ...   
+38         RF  {'max_features': 'log2', 'max_depth': 50, 'min...  0.817814   
+39         RF  {'max_features': 'log2', 'max_depth': 50, 'min...  0.848374   
+40        BAG           {'max_samples': 0.25, 'n_estimators': 5}  0.716572   
+41        BAG          {'max_samples': 0.25, 'n_estimators': 20}  0.837674   
+42        BAG           {'max_samples': 0.75, 'n_estimators': 5}  0.605134   
+43        BAG          {'max_samples': 0.75, 'n_estimators': 20}  0.840602   
+44         DT  {'max_features': 'sqrt', 'criterion': 'gini', ...  0.813739   
+45         DT  {'max_features': 'sqrt', 'criterion': 'gini', ...  0.830977   
+46         DT  {'max_features': 'log2', 'criterion': 'gini', ...  0.817019   
+47         DT  {'max_features': 'log2', 'criterion': 'gini', ...  0.830224   
+48         DT  {'max_features': 'sqrt', 'criterion': 'gini', ...  0.610248   
+49         DT  {'max_features': 'sqrt', 'criterion': 'gini', ...  0.668351   
+50         DT  {'max_features': 'log2', 'criterion': 'gini', ...  0.610931   
+51         DT  {'max_features': 'log2', 'criterion': 'gini', ...  0.670981   
+52         DT  {'max_features': 'sqrt', 'criterion': 'entropy...  0.808652   
+53         DT  {'max_features': 'sqrt', 'criterion': 'entropy...  0.806003   
+54         DT  {'max_features': 'log2', 'criterion': 'entropy...  0.820202   
+55         DT  {'max_features': 'log2', 'criterion': 'entropy...  0.811079   
+56         DT  {'max_features': 'sqrt', 'criterion': 'entropy...  0.612384   
+57         DT  {'max_features': 'sqrt', 'criterion': 'entropy...  0.661029   
+58         DT  {'max_features': 'log2', 'criterion': 'entropy...  0.615679   
+59         DT  {'max_features': 'log2', 'criterion': 'entropy...  0.666128   
+60        KNN  {'n_neighbors': 5, 'weights': 'uniform', 'algo...  0.510625   
+61        KNN  {'n_neighbors': 5, 'weights': 'distance', 'alg...  0.510805   
+62        KNN  {'n_neighbors': 25, 'weights': 'uniform', 'alg...  0.529914   
+63        KNN  {'n_neighbors': 25, 'weights': 'distance', 'al...  0.530986   
+64        KNN  {'n_neighbors': 5, 'weights': 'uniform', 'algo...  0.510625   
+65        KNN  {'n_neighbors': 5, 'weights': 'distance', 'alg...  0.510805   
+66        KNN  {'n_neighbors': 25, 'weights': 'uniform', 'alg...  0.529914   
+67        KNN  {'n_neighbors': 25, 'weights': 'distance', 'al...  0.530986   
+
+    prec_at_5  rec_at_5  acc_at_5   f1_at_5  prec_at_10  rec_at_10  acc_at_10  \
+0    0.463467  0.352250  0.930560  0.400276    0.359200   0.546007   0.906053   
+1    0.468800  0.356303  0.931093  0.404883    0.362400   0.550872   0.906693   
+2    0.460800  0.350223  0.930293  0.397973    0.358400   0.544791   0.905893   
+3    0.465067  0.353466  0.930720  0.401658    0.364267   0.553709   0.907067   
+4    0.317333  0.241184  0.915947  0.274067    0.254933   0.387515   0.885200   
+5    0.265600  0.201865  0.910773  0.229387    0.233333   0.354682   0.880880   
+6    0.432000  0.328334  0.927413  0.373100    0.333067   0.506283   0.900827   
+7    0.289067  0.219700  0.913120  0.249655    0.238667   0.362789   0.881947   
+8    0.453333  0.344548  0.929547  0.391525    0.356533   0.541954   0.905520   
+9    0.451733  0.343332  0.929387  0.390143    0.361600   0.549655   0.906533   
+10   0.421867  0.320632  0.926400  0.364348    0.337867   0.513579   0.901787   
+11   0.414400  0.314957  0.925653  0.357900    0.339733   0.516417   0.902160   
+12   0.210667  0.160113  0.905280  0.181944    0.185867   0.282529   0.871387   
+13   0.282133  0.214430  0.912427  0.243667    0.236533   0.359546   0.881520   
+14   0.201600  0.153223  0.904373  0.174113    0.201333   0.306040   0.874480   
+15   0.302933  0.230239  0.914507  0.261631    0.256533   0.389947   0.885520   
+16   0.451733  0.343332  0.929387  0.390143    0.344800   0.524118   0.903173   
+17   0.444800  0.338062  0.928693  0.384155    0.344267   0.523308   0.903067   
+18   0.461867  0.351034  0.930400  0.398895    0.345067   0.524524   0.903227   
+19   0.467733  0.355493  0.930987  0.403961    0.349867   0.531820   0.904187   
+20   0.263467  0.200243  0.910560  0.227545    0.196267   0.298338   0.873467   
+21   0.135467  0.102959  0.897760  0.116997    0.124267   0.188893   0.859067   
+22   0.336000  0.255371  0.917813  0.290189    0.242933   0.369274   0.882800   
+23   0.135467  0.102959  0.897760  0.116997    0.124267   0.188893   0.859067   
+24   0.460800  0.350223  0.930293  0.397973    0.357867   0.543981   0.905787   
+25   0.464533  0.353060  0.930667  0.401198    0.360000   0.547223   0.906213   
+26   0.462933  0.351844  0.930507  0.399816    0.358133   0.544386   0.905840   
+27   0.462400  0.351439  0.930453  0.399355    0.360000   0.547223   0.906213   
+28   0.468800  0.356303  0.931093  0.404883    0.352000   0.535063   0.904613   
+29   0.464000  0.352655  0.930613  0.400737    0.363200   0.552088   0.906853   
+..        ...       ...       ...       ...         ...        ...        ...   
+38   0.428800  0.325902  0.927093  0.370336    0.323467   0.491690   0.898907   
+39   0.461333  0.350628  0.930347  0.398434    0.348533   0.529793   0.903920   
+40   0.293867  0.223348  0.913600  0.253800    0.239733   0.364410   0.882160   
+41   0.452800  0.344143  0.929493  0.391064    0.335467   0.509931   0.901307   
+42   0.139200  0.105797  0.898133  0.120221    0.121067   0.184029   0.858427   
+43   0.406400  0.308877  0.924853  0.350990    0.321067   0.488042   0.898427   
+44   0.438933  0.333604  0.928107  0.379088    0.333600   0.507094   0.900933   
+45   0.437333  0.332388  0.927947  0.377706    0.342933   0.521281   0.902800   
+46   0.427733  0.325091  0.926987  0.369415    0.331467   0.503851   0.900507   
+47   0.441067  0.335225  0.928320  0.380930    0.333600   0.507094   0.900933   
+48   0.318933  0.242400  0.916107  0.275449    0.384533   0.584516   0.911120   
+49   0.316800  0.240778  0.915893  0.273607    0.238667   0.362789   0.881947   
+50   0.319467  0.242805  0.916160  0.275910    0.397067   0.603567   0.913627   
+51   0.326933  0.248480  0.916907  0.282358    0.245867   0.373733   0.883387   
+52   0.435200  0.330766  0.927733  0.375864    0.322667   0.490474   0.898747   
+53   0.436267  0.331577  0.927840  0.376785    0.336533   0.511552   0.901520   
+54   0.438400  0.333198  0.928053  0.378627    0.336533   0.511552   0.901520   
+55   0.438933  0.333604  0.928107  0.379088    0.324800   0.493717   0.899173   
+56   0.332800  0.252939  0.917493  0.287425    0.406933   0.618565   0.915600   
+57   0.312000  0.237130  0.915413  0.269461    0.237867   0.361573   0.881787   
+58   0.342400  0.260235  0.918453  0.295716    0.438933   0.667207   0.922000   
+59   0.305600  0.232266  0.914773  0.263934    0.243467   0.370085   0.882907   
+60   0.261867  0.199027  0.910400  0.226163    0.198933   0.302392   0.874000   
+61   0.075733  0.057560  0.891787  0.065408    0.070667   0.107418   0.848347   
+62   0.154667  0.117552  0.899680  0.133579    0.140533   0.213620   0.862320   
+63   0.078933  0.059992  0.892107  0.068171    0.077600   0.117957   0.849733   
+64   0.261867  0.199027  0.910400  0.226163    0.198933   0.302392   0.874000   
+65   0.075733  0.057560  0.891787  0.065408    0.070667   0.107418   0.848347   
+66   0.154667  0.117552  0.899680  0.133579    0.140533   0.213620   0.862320   
+67   0.078933  0.059992  0.892107  0.068171    0.077600   0.117957   0.849733   
+
+    f1_at_10  prec_at_20  rec_at_20  acc_at_20  f1_at_20         time  
+0   0.433328    0.236800   0.719903   0.828933  0.356376     2.062378  
+1   0.437188    0.233067   0.708553   0.827440  0.350757     3.051443  
+2   0.432363    0.235733   0.716660   0.828507  0.354771    18.711824  
+3   0.439440    0.238133   0.723956   0.829467  0.358383    28.316372  
+4   0.307544    0.194933   0.592623   0.812187  0.293368   208.563952  
+5   0.281486    0.200267   0.608837   0.814320  0.301395   182.385348  
+6   0.401802    0.225733   0.686259   0.824507  0.339721  2301.333418  
+7   0.287920    0.216267   0.657479   0.820720  0.325474  1244.697410  
+8   0.430111    0.231333   0.703283   0.826747  0.348149     1.951853  
+9   0.436223    0.236133   0.717876   0.828667  0.355373     2.992094  
+10  0.407592    0.225733   0.686259   0.824507  0.339721    14.473021  
+11  0.409844    0.231867   0.704905   0.826960  0.348952    23.786162  
+12  0.224224    0.139733   0.424807   0.790107  0.210294   179.858302  
+13  0.285347    0.154133   0.468585   0.795867  0.231965   151.420065  
+14  0.242882    0.127467   0.387515   0.785200  0.191833   759.452974  
+15  0.309474    0.221200   0.672477   0.822693  0.332899   182.067379  
+16  0.415956    0.240400   0.730847   0.830373  0.361794     1.044428  
+17  0.415313    0.228000   0.693150   0.825413  0.343132    94.349257  
+18  0.416278    0.244133   0.742197   0.831867  0.367412     1.175400  
+19  0.422069    0.233867   0.710985   0.827760  0.351961   105.695240  
+20  0.236770    0.142000   0.431698   0.791013  0.213705     0.640951  
+21  0.149912    0.110667   0.336441   0.778480  0.166550     1.122600  
+22  0.293067    0.162133   0.492906   0.799067  0.244005     1.931491  
+23  0.149912    0.110667   0.336441   0.778480  0.166550     1.152048  
+24  0.431719    0.231467   0.703689   0.826800  0.348350     0.780946  
+25  0.434293    0.234800   0.713822   0.828133  0.353366     4.138138  
+26  0.432041    0.234400   0.712606   0.827973  0.352764     0.683823  
+27  0.434293    0.235733   0.716660   0.828507  0.354771     4.109589  
+28  0.424642    0.237067   0.720713   0.829040  0.356777     0.690342  
+29  0.438153    0.236267   0.718281   0.828720  0.355573     4.155209  
+..       ...         ...        ...        ...       ...          ...  
+38  0.390220    0.221467   0.673287   0.822800  0.333300     1.440837  
+39  0.420460    0.235867   0.717065   0.828560  0.354971    11.521423  
+40  0.289207    0.175867   0.534657   0.804560  0.264673     0.300706  
+41  0.404697    0.226267   0.687880   0.824720  0.340524     0.723081  
+42  0.146051    0.106400   0.323470   0.776773  0.160128     0.285490  
+43  0.387325    0.226533   0.688691   0.824827  0.340925     1.393450  
+44  0.402445    0.216800   0.659100   0.820933  0.326277     0.256527  
+45  0.413704    0.223600   0.679773   0.823653  0.336510     0.323740  
+46  0.399871    0.221067   0.672071   0.822640  0.332698     0.308079  
+47  0.402445    0.224667   0.683016   0.824080  0.338116     0.268645  
+48  0.463889    0.328933   1.000000   0.865787  0.495034     0.471164  
+49  0.287920    0.328933   1.000000   0.865787  0.495034     0.441442  
+50  0.479009    0.328933   1.000000   0.865787  0.495034     0.400093  
+51  0.296606    0.328933   1.000000   0.865787  0.495034     0.496871  
+52  0.389255    0.223733   0.680178   0.823707  0.336711     0.352246  
+53  0.405984    0.222133   0.675314   0.823067  0.334303     0.339921  
+54  0.405984    0.225733   0.686259   0.824507  0.339721     0.383442  
+55  0.391829    0.219200   0.666396   0.821893  0.329889     0.291197  
+56  0.490912    0.328933   1.000000   0.865787  0.495034     0.533424  
+57  0.286955    0.328933   1.000000   0.865787  0.495034     0.514168  
+58  0.529516    0.328933   1.000000   0.865787  0.495034     0.533608  
+59  0.293711    0.328933   1.000000   0.865787  0.495034     0.532231  
+60  0.239987    0.099467   0.302392   0.774000  0.149694     1.799795  
+61  0.085250    0.070667   0.214836   0.762480  0.106351     1.780529  
+62  0.169535    0.089200   0.271180   0.769893  0.134243     2.445657  
+63  0.093614    0.075333   0.229023   0.764347  0.113374     2.376937  
+64  0.239987    0.099467   0.302392   0.774000  0.149694     5.037578  
+65  0.085250    0.070667   0.214836   0.762480  0.106351     5.011502  
+66  0.169535    0.089200   0.271180   0.769893  0.134243     6.133987  
+67  0.093614    0.075333   0.229023   0.764347  0.113374     6.090843  
+
+[68 rows x 16 columns]
+highest auc-roc: 0.8645041271006846 (GB)
+highest precision at k=5: 0.4688 (GB)
+highest recall at k=5: 0.35630320226996354 (GB)
+highest accuracy at k=5: 0.9310933333333333 (GB)
+highest f1 at k=5: 0.4048825426070935 (GB)
+highest precision at k=10: 0.43893333333333334 (DT)
+highest recall at k=10: 0.6672071341710579 (GB)
+highest accuracy at k=10: 0.922 (DT)
+highest f1 at k=10: 0.5295158436544957 (DT)
+highest precision at k=20: 0.32893333333333336 (DT)
+highest recall at k=20: 1.0 (DT)
+highest accuracy at k=20: 0.8657866666666667 (DT)
+highest f1 at k=20: 0.49503361091602294 (DT)

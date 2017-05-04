@@ -1,0 +1,175 @@
+Overview
+
+Rows: 150000 Columns: 13
+
+Column names:  ['PersonID', 'SeriousDlqin2yrs', 'RevolvingUtilizationOfUnsecuredLines', 'age', 'zipcode', 'NumberOfTime30-59DaysPastDueNotWorse', 'DebtRatio', 'MonthlyIncome', 'NumberOfOpenCreditLinesAndLoans', 'NumberOfTimes90DaysLate', 'NumberRealEstateLoansOrLines', 'NumberOfTime60-89DaysPastDueNotWorse', 'NumberOfDependents']
+
+Data types
+PersonID                                  int64
+SeriousDlqin2yrs                          int64
+RevolvingUtilizationOfUnsecuredLines    float64
+age                                       int64
+zipcode                                   int64
+NumberOfTime30-59DaysPastDueNotWorse      int64
+DebtRatio                               float64
+MonthlyIncome                           float64
+NumberOfOpenCreditLinesAndLoans           int64
+NumberOfTimes90DaysLate                   int64
+NumberRealEstateLoansOrLines              int64
+NumberOfTime60-89DaysPastDueNotWorse      int64
+NumberOfDependents                      float64
+dtype: object
+
+Nulls
+
+value                                  False  True 
+variable                                           
+DebtRatio                             150000      0
+MonthlyIncome                         120269  29731
+NumberOfDependents                    146076   3924
+NumberOfOpenCreditLinesAndLoans       150000      0
+NumberOfTime30-59DaysPastDueNotWorse  150000      0
+NumberOfTime60-89DaysPastDueNotWorse  150000      0
+NumberOfTimes90DaysLate               150000      0
+NumberRealEstateLoansOrLines          150000      0
+PersonID                              150000      0
+RevolvingUtilizationOfUnsecuredLines  150000      0
+SeriousDlqin2yrs                      150000      0
+age                                   150000      0
+zipcode                               150000      0
+
+Describe Data
+
+            PersonID  SeriousDlqin2yrs  RevolvingUtilizationOfUnsecuredLines  \
+count  150000.000000     150000.000000                         150000.000000   
+mean    75000.500000          0.066840                              6.048438   
+std     43301.414527          0.249746                            249.755371   
+min         1.000000          0.000000                              0.000000   
+25%     37500.750000          0.000000                              0.029867   
+50%     75000.500000          0.000000                              0.154181   
+75%    112500.250000          0.000000                              0.559046   
+max    150000.000000          1.000000                          50708.000000   
+
+                 age        zipcode  NumberOfTime30-59DaysPastDueNotWorse  \
+count  150000.000000  150000.000000                         150000.000000   
+mean       52.295207   60648.810013                              0.421033   
+std        14.771866      56.748197                              4.192781   
+min         0.000000   60601.000000                              0.000000   
+25%        41.000000   60625.000000                              0.000000   
+50%        52.000000   60629.000000                              0.000000   
+75%        63.000000   60644.000000                              0.000000   
+max       109.000000   60804.000000                             98.000000   
+
+           DebtRatio  MonthlyIncome  NumberOfOpenCreditLinesAndLoans  \
+count  150000.000000   1.202690e+05                    150000.000000   
+mean      353.005076   6.670221e+03                         8.452760   
+std      2037.818523   1.438467e+04                         5.145951   
+min         0.000000   0.000000e+00                         0.000000   
+25%         0.175074   3.400000e+03                         5.000000   
+50%         0.366508   5.400000e+03                         8.000000   
+75%         0.868254   8.249000e+03                        11.000000   
+max    329664.000000   3.008750e+06                        58.000000   
+
+       NumberOfTimes90DaysLate  NumberRealEstateLoansOrLines  \
+count            150000.000000                 150000.000000   
+mean                  0.265973                      1.018240   
+std                   4.169304                      1.129771   
+min                   0.000000                      0.000000   
+25%                   0.000000                      0.000000   
+50%                   0.000000                      1.000000   
+75%                   0.000000                      2.000000   
+max                  98.000000                     54.000000   
+
+       NumberOfTime60-89DaysPastDueNotWorse  NumberOfDependents  
+count                         150000.000000       146076.000000  
+mean                               0.240387            0.757222  
+std                                4.155179            1.115086  
+min                                0.000000            0.000000  
+25%                                0.000000            0.000000  
+50%                                0.000000            0.000000  
+75%                                0.000000            1.000000  
+max                               98.000000           20.000000  
+
+number_of_time60-89_days_past_due_not_worse median
+serious_dlqin2yrs mode
+revolving_utilization_of_unsecured_lines mean
+number_of_time30-59_days_past_due_not_worse median
+debt_ratio median
+age mean
+number_of_open_credit_lines_and_loans mode
+zipcode mode
+number_of_dependents median
+number_real_estate_loans_or_lines mean
+monthly_income median
+number_of_times90_days_late median
+chart saved
+Distributions
+
+0.0     90826
+1.0     26316
+2.0     19522
+3.0      9483
+4.0      2862
+5.0       746
+6.0       158
+7.0        51
+8.0        24
+9.0         5
+10.0        5
+13.0        1
+20.0        1
+Name: number_of_dependents, dtype: int64
+
+chart saved
+
+0    139974
+1     10026
+Name: serious_dlqin2yrs, dtype: int64
+
+chart saved
+chart saved
+chart saved
+chart saved
+
+
+
+
+  model_type                                         parameters   auc-roc  \
+0        BAG                                {'n_estimators': 5}  0.757980   
+1         DT  {'criterion': 'gini', 'max_features': 'sqrt', ...  0.621244   
+2         RF  {'max_features': 'sqrt', 'max_depth': 1, 'min_...  0.680375   
+3        KNN  {'algorithm': 'auto', 'weights': 'uniform', 'n...  0.512028   
+4         LR                       {'penalty': 'l1', 'C': 0.01}  0.698117   
+5         AB          {'algorithm': 'SAMME', 'n_estimators': 1}  0.658805   
+6         GB  {'subsample': 0.5, 'n_estimators': 1, 'max_dep...  0.658805   
+
+   prec_at_5  rec_at_5  acc_at_5   f1_at_5  prec_at_10  rec_at_10  acc_at_10  \
+0   0.330667  0.246815  0.916080  0.282653    0.255200   0.380971   0.884053   
+1   0.370667  0.276672  0.920080  0.316845    0.669867   1.000000   0.966987   
+2   0.662933  0.494825  0.949307  0.566674    0.331467   0.494825   0.899307   
+3   0.244800  0.182723  0.907493  0.209255    0.203733   0.304140   0.873760   
+4   0.354667  0.264729  0.918480  0.303168    0.245867   0.367038   0.882187   
+5   0.472533  0.352707  0.930267  0.403921    0.669867   1.000000   0.966987   
+6   0.472533  0.352707  0.930267  0.403921    0.669867   1.000000   0.966987   
+
+   f1_at_10  prec_at_20  rec_at_20  acc_at_20  f1_at_20      time  
+0  0.305653    0.183067   0.546576   0.806240  0.274271  0.315735  
+1  0.802300    0.334933   1.000000   0.866987  0.501798  0.130344  
+2  0.396998    0.334933   1.000000   0.866987  0.501798  0.170085  
+3  0.244011    0.101867   0.304140   0.773760  0.152617  1.810673  
+4  0.294475    0.163600   0.488455   0.798453  0.245106  2.479097  
+5  0.802300    0.334933   1.000000   0.866987  0.501798  0.169124  
+6  0.802300    0.334933   1.000000   0.866987  0.501798  0.259465  
+highest auc-roc: 0.7579802724901495 (BAG)
+highest precision at k=5: 0.6629333333333334 (RF)
+highest recall at k=5: 0.4948248407643312 (RF)
+highest accuracy at k=5: 0.9493066666666666 (RF)
+highest f1 at k=5: 0.5666742648734898 (RF)
+highest precision at k=10: 0.6698666666666667 (DT)
+highest recall at k=10: 1.0 (BAG)
+highest accuracy at k=10: 0.9669866666666667 (DT)
+highest f1 at k=10: 0.8022995847971894 (DT)
+highest precision at k=20: 0.33493333333333336 (DT)
+highest recall at k=20: 1.0 (DT)
+highest accuracy at k=20: 0.8669866666666667 (DT)
+highest f1 at k=20: 0.5017978425888934 (DT)

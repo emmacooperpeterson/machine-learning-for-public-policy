@@ -11,6 +11,8 @@ def fill_missing(df, column, filler='mean'):
     a specific column, rather than the entire dataframe at once. added ability to filler
     with mode or median instead of mean for categorical variables
 
+    in the future: fill in values more strategically instead of using same value for entire column
+
     '''
     if filler == 'mean':
         df[column].fillna(df[column].mean(), inplace=True)
@@ -20,7 +22,6 @@ def fill_missing(df, column, filler='mean'):
     
     if filler == 'median':
         df[column].fillna(df[column].median(), inplace=True)
-
 
     return df
 
