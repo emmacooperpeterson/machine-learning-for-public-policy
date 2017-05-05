@@ -22,6 +22,8 @@ import seaborn as sns
 
 def define_clfs_params(grid_size):
     '''adapted from: https://github.com/rayidghani/magicloops/blob/master/magicloops.py
+
+    Return classifiers and parameter grid, based on input grid size
     
     SVM refusing to run for some reason?
     
@@ -102,7 +104,16 @@ def generate_binary_at_k(y_scores, k):
 
 
 def eval_metrics(y_true, y_scores, k):
-    '''adapted from: https://github.com/rayidghani/magicloops/blob/master/magicloops.py'''
+    '''adapted from: https://github.com/rayidghani/magicloops/blob/master/magicloops.py
+    
+    Returns dictionary with precision, recall, accuracy, and f1 scores
+
+    accuracy = correct / total
+    precision = true positive / predicted positive
+    recall = true positive / true
+    f1 = 2 (precision * recall) / precision + recall
+
+    '''
 
     scores = {}
     preds_at_k = generate_binary_at_k(y_scores, k)
@@ -123,7 +134,11 @@ def eval_metrics(y_true, y_scores, k):
 
 
 def model_loop(df, features, y, grid_size):
-    '''adapted from: https://github.com/rayidghani/magicloops/blob/master/magicloops.py'''
+    '''adapted from: https://github.com/rayidghani/magicloops/blob/master/magicloops.py
+    
+    Loops through models and parameters; prints and returns dataframe of evaluation metrics
+    
+    '''
     
     #initialize dataframe to store results
     results_df =  pd.DataFrame(columns=('model_type', 'parameters', 'auc-roc', 
@@ -183,6 +198,9 @@ def model_loop(df, features, y, grid_size):
     return results_df
 
 def evaluate_results(results_df):
+
+    '''prints highest evaluation metrics'''
+    
     index = results_df['auc-roc'].argmax()
     print('highest auc-roc: {} ({})'.format(results_df['auc-roc'].max(), results_df.ix[index, 'model_type']))
 
