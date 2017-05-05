@@ -1,0 +1,22 @@
+For the sake of time, the classifier loop was run using a mini-grid of various parameters for the following types of models: Random Forest, Logistic Regression, Gradient Boosting, Decision Tree, K-Nearest Neighbors, AdaBoost, and Bagging.
+
+
+•The longest running model was Gradient Boosting with the following parameters:{'max_depth': 50, 'learning_rate': 0.1, 'subsample': 0.3, 'n_estimators': 100}
+	⁃This took nearly 40 minutes on its own to complete.
+
+•Overall, Gradient Boosting tended to take the longest amount of time with any set of parameters, while Decision Tree tended to be the fastest.
+
+•A Gradient Boosting model with the following parameters achieved the highest area under the ROC curve, meaning it maximized true positives and minimized false positives: {'max_depth': 5, 'learning_rate': 0.1, 'subsample': 1.0, 'n_estimators': 100}
+
+•At lower values of K, Gradient Boosting appears to have performed the best.  At k=5, Gradient Boosting is the best on precision (0.47), recall (0.36), accuracy (0.93), and F1 (0.40).  Each of these scores came from the GB classifier with the following parameters: {'max_depth': 5, 'learning_rate': 0.1, 'subsample': 1.0, 'n_estimators': 10}
+
+•At higher values of k, Decision Tree seems to do best.  At k=20, it produces the highest precision (0.33), recall (1.0), accuracy (0.86), and F1 (0.50).  Multiple versions of the Decision Tree classifier produced these same results.
+
+•In general, precision tends to be lowest at k=20 and highest at k=10. Recall tends to be lowest at k=5 and highest at k=20.
+
+•K-Nearest Neighbors performed the worst on both precision and recall.
+
+
+Which model to prefer depends on the usage of the results.  The relative importance of false positives and false negatives is one thing to consider.  If it is very important that positive observations be correctly identified as positive, prioritize high recall.  If it is very important that the model’s positive predictions are correct, prioritize high precision.
+
+My recommendation to someone working on the credit model would be to run these classifiers with other sets of parameters, in order to better maximize the evaluation metrics of interest.  Similarly, it would also be important to try various combinations of features. Since 93% of observations were ‘no’ for SeriousDlqin2yrs, simply predicting ‘no’ on everything would results in 93% accuracy.  Therefore, we would also want to prefer models that achieve accuracy greater than 0.93.
